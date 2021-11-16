@@ -10,10 +10,10 @@ You will be able to:
 -> Add a sticky note anywhere on the screen.
 -> Drag and drop a sticky note to a new location.
 -> Delete a sticky note.
--> Set the text contained in a sticky note (either at creation or after).
+-> Set the text contained in a sticky note.
 -> Clear the canvas of all sticky notes.
 -> Color: Add ability to change the color of a sticky note.
--> Drawing: Add ability to draw anywhere on the canvas (super bonus if you add ability to erase).
+-> Drawing: Add ability to draw anywhere on the canvas.
 -> Images: Add ability to upload images to the canvas.
 
 Hritik Pathak
