@@ -16,4 +16,4 @@ You will be able to:
 -> Drawing: Add ability to draw anywhere on the canvas.
 -> Images: Add ability to upload images to the canvas.
 
-Hritik Pathak
+Hritik Pathak © 2021
