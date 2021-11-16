@@ -1,0 +1,135 @@
+/*get rid of the default padding and margin
+*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background: grey;
+    position: relative;
+    font-family: "Dongle";
+    font-size: 20px;
+    min-height: 100vh;
+    min-width: 1024px;
+}
+.primary_container
+{
+    width: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.noteClass:hover{
+    cursor: pointer;
+}
+
+.close:before {
+    content: '✕';
+}
+
+.close {
+    position: absolute;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.secondary_container1
+{
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.secondary_container2
+{
+    display: flex;
+    float: left;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 25%;
+    transition: background 0.2s;
+
+}
+.secondary_container3
+{
+    /*
+    shouldn't be displaying in the screen first */
+    display: none;
+    position: absolute;
+    top: 27%;
+    float: left;
+    left: 40%;
+}
+.uploadMe
+{
+    display:inline-block;
+    margin-right:5px;
+}
+textarea
+{
+    outline-style:double;
+    border:none;
+    width: 300px;
+    height: 180px;
+    padding: 70px 35px 35px 75px ;
+}
+#yes_icon
+{
+    position: absolute;
+    right: 20%;
+    top: 5%
+}
+#cancel_icon
+{
+    position: absolute;
+    right: 10%;
+    top:5%;
+}
+#blueColor
+{
+    position: absolute;
+    right: 70%;
+    top:88%;
+}
+#lightBlueColor
+{
+    position: absolute;
+    right: 60%;
+    top:88%;
+}
+#redColor
+{
+    position: absolute;
+    right: 50%;
+    top:88%;
+}
+#greyColor
+{
+    position: absolute;
+    right: 40%;
+    top:88%;
+}
+#greenColor
+{
+    position: absolute;
+    right: 30%;
+    top:88%;
+}
+#yellowColor
+{
+    position: absolute;
+    right: 20%;
+    top:88%;
+}
+footer 
+{
+    text-align: center;
+    background-color: DarkSalmon;
+    color: white;
+    bottom: 10%;
+
+  }

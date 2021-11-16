@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap css link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <!--google font link-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Welcome to sticky notes</title>
+    <script src="script.js" defer> </script>
+    <!--defer to make the jsfile load up as the webpage loads up but only executes after everything in css is executed. Prevents unknown element error.-->
+</head>
+
+<body>
+
+
+    <!--primary div container with secondary containers-->
+    <div class="primary_container">
+
+        <div class="secondary_container1">
+            <button class="btn btn-primary" id=" newNote" onclick="noteBox()"> New Note!</button>
+            <button class="btn btn-secondary" id="drawMe" onclick="drawFunction()"> Draw!</button>
+            <button class="btn btn-light" id="eraseMe" onclick="erase()"> Erase!</button>
+            <button class="btn btn-success" onclick="deleteAll()"> Delete All!</button>
+            <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                style="display: none;">
+            <label class="btn btn-secondary" for="file">Upload Image</label>
+            <!--<img class = "myImage" id="output" width="200">-->
+        </div>
+        <!--Container 2 is for notes so we use javaScript to fill this up. Hence, left empty-->
+
+        <div class="secondary_container2" id="theDiv">
+
+        </div>
+        <div class="secondary_container3">
+            <form>
+                <textarea id="note-text" placeholder="What's going on?" maxlength="150"></textarea>
+                <!--Yes icon copied from bootstrap-->
+                <svg id="yes_icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-emoji-sunglasses-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z" />
+                </svg>
+                <!--cancel icon copied from bootstrap-->
+                <svg id="cancel_icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                </svg>
+
+                <!--blue color-->
+                <button type="button" class="btn btn-primary btn-sm" id="blueColor"
+                    onclick="chooseColor('rgb(0,0,255)')"></button>
+                <!--grey grey-->
+                <button type="button" class="btn btn-secondary btn-sm" id="greyColor"
+                    onclick="chooseColor('#696969')"></button>
+                <!--green color-->
+                <button type="button" class="btn btn-success btn-sm" id="greenColor"
+                    onclick="chooseColor('#008000')"></button>
+                <!--red color-->
+                <button type="button" class="btn btn-danger btn-sm" id="redColor"
+                    onclick="chooseColor('#FF0000')"></button>
+                <!--yellow color-->
+                <button type="button" class="btn btn-warning btn-sm" id="yellowColor"
+                    onclick="chooseColor('#FFFF00')"></button>
+                <!--light blue color-->
+                <button type="button" class="btn btn-info btn-sm" id="lightBlueColor"
+                    onclick="chooseColor('#ADD8E6')"></button>
+
+            </form>
+        </div>
+
+
+    </div>
+    <canvas id="can" width=1464px height=1024px style="position:absolute;top:10;left:0;border:2px solid;"></canvas>
+
+</body>
+</html>
